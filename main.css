@@ -2,7 +2,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    z-index: 1;
     padding: 20px;
+    top: 0;
+    background: white;
   }
 
   body {
@@ -59,13 +63,23 @@ header {
 
   }
 
+  .about__info {
+    animation: fadeInLeft 1.5s ease-in 1;
+  }
+
   .about__image {
     width: 500px;
   }
+
+  .about__images {
+    animation: fadeInRight 1.5s ease-in 1;
+  }
    
   .about__sun-image {
+    position: absolute;
     width: 100px;
     height: 100px;
+    animation: rotation 10s linear infinite;
   }
 
   .about {
@@ -164,6 +178,7 @@ header {
   .footer__container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
   }
 
@@ -191,4 +206,67 @@ header {
 
   .footer__links a {
     margin-bottom: 15px;
+  }
+
+  @keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
+
+  @media (max-width: 720px) {
+    .about__sun-image {
+      width: 75px;
+      height: 75px;
+    }
+    .about__image {
+      width: 280px;
+    }
+    .header__logo {
+      height: 20px;
+    }
+    header a {
+      margin-right: 10px;
+    }
+    h1 {
+      font-size: 36px; 
+      line-height: 40px;
+    }
+    .about h1 {
+      font-size: 36px; 
+      line-height: 40px;
+    }
+    section {
+      padding: 50px 10px;
+    }
+    footer {
+      padding: 50px 10px;
+    }
+    .footer__container {
+      justify-content: start;
+    }
+    .about {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    h1 {
+      font-size: 36px; 
+      line-height: 40px;
+    }
+    .about h1 {
+      font-size: 36px; 
+      line-height: 40px;
+    }
+    .about__sun-image {
+      width: 75px;
+      height: 75px;
+    }
+    .about__image {
+      width: 280px;
+    }
   }
