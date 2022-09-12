@@ -63,16 +63,8 @@ header {
 
   }
 
-  .about__info {
-    animation: fadeInLeft 1.5s ease-in 1;
-  }
-
   .about__image {
     width: 500px;
-  }
-
-  .about__images {
-    animation: fadeInRight 1.5s ease-in 1;
   }
    
   .about__sun-image {
