@@ -61,6 +61,17 @@ header {
     font-size: 16px;
     font-weight: 600;
   }
+  
+  .about {
+    position: relative;
+  }
+
+  .orb-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
 
   .about__image {
     width: 500px;
